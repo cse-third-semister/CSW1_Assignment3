@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.6.2.min.js">
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+
+
+        }
+
+        .a{
+            padding: 50px;
+            margin-left: 50px;
+            margin-right: 500px;
+            margin-top: 50px;
+            border: 2px solid black;
+            border-width: 10px;
+            
+        }
+        input[type=text], select{
+            width: 95%;
+            padding: 12px 20px;
+            border: 3px solid rgb(230, 105, 2);
+            box-sizing: border-box;
+        }
+        input[type=email], select{
+            width: 95%;
+            padding: 12px 20px;
+            border: 3px solid rgb(230, 105, 2);
+        }
+        input[type=submit] {
+            width: 95%;
+            background-color: #449601;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+        }
+        input[type=text]:hover {
+            background-color: #d9f0d8;
+          }
+          input[type=text]:hover {
+            border-color: #1f06fc;
+          }
+          input[type=email]:hover {
+            border-color: #1404f7;
+          }
+          input[type=submit]:hover
+          {
+            background-color: rgb(2, 73, 14);
+          }
+        
+    </style>
+</head>
+<body>
+    <form>
+    <div class="a">
+       <center> <h1 style="color: red; font-family:Calibri"><U>FORM</U></h1></center>
+        <label for="fname"> <b>FirstName:</b></label><br>
+        <input type="text" id="text1" placeholder="Enter your firstname"  name="firstname"><br>
+        <br>
+        <label for="lname"><b>LastName:</b></label><br>
+        <input type="text" id="text2"  placeholder="Enter your lastname" name="lastname"><br>
+        <br>
+        <label for="email"><b>Email:</b></label><br>
+        <input type="email" id="text3" placeholder="Enter your email" name="email"><br>
+        <BR>
+            <label for="iname"><b>Institute Name:</b></label><br>
+        <input type="text" id="text4" placeholder="Enter institute name" name="name"><br>
+        <br>
+        <input type="submit" value="submit" onclick="validateForm()">
+    
+    </div>
+    </form>
+    </body>
+
+    <script>
+        function validateForm() 
+        { 
+            var b = document.getElementById('text1').value; 
+            var c = document.getElementById('text2').value; 
+            var d = document.getElementById('text3').value; 
+            var e = document.getElementById('text4').value; 
+         
+             if (b == "" || b == null) { 
+                alert("Firstname is Empty"); 
+                } 
+                else if (c == "" || c == null) { 
+                alert("Lastname is Empty"); 
+                } 
+                else if (d == "" || d == null) { 
+                alert("Email is Empty"); 
+                } 
+                 else if (e == "" || e == null) { 
+                alert("Institute name is Empty"); 
+                } 
+                 else{ 
+                alert("Sign Up successful");
+                } 
+                } 
+</script>
+</html>

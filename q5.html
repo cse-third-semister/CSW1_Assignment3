@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Question4</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"   ></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        .container{
+           
+            display: block;
+        }
+        .nav{
+            border: 4px solid rgb(4, 16, 3);
+            background-color: rgb(227, 177, 11);
+
+        }
+        .para{
+            border: 2px solid rgb(1, 6, 1);
+            background-color: rgb(8, 196, 196);
+            position: absolute;
+            width: 99.6%;
+            height: 100px;
+            display: none;
+            z-index:100;
+            
+
+        }
+        .about{
+            border: 2px solid rgb(213, 21, 28);
+            background-color: rgb(211, 109, 14);
+            position: relative;
+            width: 99.6%;
+            height: 100px;
+
+        }
+        .about .h{
+           position: absolute;
+           
+         left: 50%;
+          
+
+
+        }
+        .content{
+            border: 2px solid rgb(107, 213, 21);
+            height: 100px;
+            background-color: rgb(112, 239, 8);
+            width: 0px;
+
+            position: relative;
+            
+        }
+        .content p{
+           display: none;
+        }
+        .hide{
+            border: 2px solid rgb(107, 213, 21);
+            background-color: chartreuse;
+
+        }
+        button{
+            width: 70px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: chocolate;
+            border:2px solid black ;
+        }
+        .content3{
+            background-color: rgb(235, 235, 235);
+            border:2px solid rgb(5, 2, 2) ;
+            display: inline-block;
+
+        }
+        #demo ,#demo1{
+            background-color: chartreuse;
+            font-size: 30px;
+        }
+        #demo2 ,#demo3{
+            background-color: chartreuse;
+            font-size: 30px;
+        }
+       
+
+
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="nav">
+        <h2>click to know me</h2>
+    </div>
+    <div class="para">
+       
+    </div>
+   </div>
+
+   <section class="about">
+    <div class="h">
+        <h2>hover me please !!!!!</h2>
+    </div>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cupiditate et, earum deserunt recusandae amet doloremque provident sit dicta reprehenderit!</p>
+
+    </div>
+   </section>
+   <button id="hide">hide</button>
+    <button id="show">show</button>
+   <section class="hide">
+    
+    <div class="content2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, fugiat?</p>
+    </div>
+   </section>
+
+
+
+   <section class="mouse">
+    <div class="content3">
+       <p id="pa"><a href="https://www.google.co.in/" target="_blank" id="al"><b>This page is google</b> </a></p>
+
+       
+    </div>
+
+    
+    <p id="demo"></p>
+    <p id="demo1"></p>
+   </section>
+   <button id="hide1">get html</button>
+    <button id="show1">get attr</button>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    
+</body>
+<script>
+     $(document).ready(function(){
+        $(".nav").click(function(){
+            $(".para").slideDown(1000);
+        });
+
+        $(".about").hover(function(){
+            
+            $(".content p").show();
+            $(".content").animate({fontSize:"20px",width:"100%",background:"rgb(112, 239, 8)"},3000);
+            $(".content").fadeIn(2000);
+            
+        });
+        $("#hide").click(function(){
+            $(".content2 p").hide(1000);
+        });
+        $("#show").click(function(){
+            $(".content2 p").show(1000);
+        });
+       
+        $(".content3").mouseenter(function(){
+            document.getElementById("demo").innerHTML = "you enter the link";
+        });
+        $(".content3").mouseleave(function(){
+            document.getElementById("demo1").innerHTML = "you leave the link";
+        });
+        $("#hide1").click(function(){
+            document.getElementById("demo2").innerHTML = $("#pa").html();
+        });
+        $("#show1").dblclick(function(){
+            document.getElementById("demo3").innerHTML = $("#al").attr("href");
+        });
+
+       
+        
+      
+
+       
+    });
+
+   
+
+</script>
+</html>
+

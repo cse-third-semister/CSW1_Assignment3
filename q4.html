@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Question4</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"   ></script>
+    <style>
+        .overlay {
+          visibility: hidden;
+          opacity: 0;
+        }
+        .overlay:target {
+          visibility: visible;
+          opacity: 1;
+        }
+        .popup {
+        margin: 70px auto;
+          padding: 20px;
+          background: #fff;
+          border-radius: 5px;
+          width: 30%;
+          position: relative;
+          border: 2px solid rgb(9, 7, 7);
+          background-color:rgb(103, 101, 101) ;
+        }
+        .popup .close {
+          position: absolute;
+          top: -34px;
+          right: 0px;
+          font-size: 30px;
+        }
+        .popup .content {
+          overflow: auto;
+        }
+        .button{
+            border: 2px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgb(109, 107, 107);
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        
+        </style>
+</head>
+<body>
+    <h1>Popup without Javascript</h1>
+    <div>
+    <a class="button" href="#popup1">Click to popup</a>
+    </div>
+    <div id="popup1" class="overlay">
+    <div class="popup">
+    <h2>The popup content is</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+    This is the example of popup without javascript
+    </div>
+    </div>
+    </div>
+    </body>
+
+</html>

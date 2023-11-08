@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"   ></script>
+<style>
+table, th, td {
+  border: 2px solid black;
+  font-size: 20px;
+  
+}
+th{
+    background-color: rgb(124, 122, 121);
+}
+td{
+    background-color: rgb(254, 254, 250);
+
+}
+
+table {
+  width: 100%;
+}
+button{
+    border: 2px solid black;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px ;
+    background-color: rgb(117, 115, 115);
+    font-size: 16px;
+}
+#txt{
+    width: 200px;
+    height: 50px;
+    border: 3px solid black;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>Full-width Table</h2>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr id="dlt">
+    <td >Jyoti</td>
+    <td>Ranjan</td>
+  </tr>
+  <tr >
+    <td>Hare</td>
+    <td>Krishna</td>
+  </tr>
+</table>
+<button id="btn-row">add row</button>
+<button id="btn-clr">change color</button><BR></BR>
+<input type="text" id="txt" placeholder="Enter your  id">
+
+<button id="btn-dlt" >delete row</button>
+<script>
+    $(document).ready(function(){
+        $("#btn-row").click(function(){
+            $("table").append(" <tr>",
+                "<td>upedra</td>",
+                "<td>jogging</td>",
+                            "</tr>")
+        });
+        $("#btn-clr").click(function(){
+           $("td").css("color","red");
+        });
+     
+        $("#btn-dlt").click(function(){
+       
+           $("#"+$("#txt").val()).remove();
+        });
+    })
+</script>
+</body>
+</html>
+    
+
+
+

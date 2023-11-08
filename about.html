@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"   ></script>
+    <title>About us</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            margin: 0;
+            background-color: rgb(39, 21, 12);
+            color: white;
+            font-family: cursive;
+            padding: 10px;
+        }
+       
+        ul{
+            /* border: 2px solid red; */
+            background-color: rgb(66, 64, 60);
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content:space-evenly;
+            flex-wrap: wrap;
+        }
+        li{
+           
+            border: 2px solid rgb(12, 4, 4);
+            list-style-type: none;
+            border-radius: 20px;
+            background-color: black;
+           
+          
+            
+            padding: 20px;
+            width: 100px;
+            
+        }
+        .text{
+            display: flex;
+            justify-content: center;
+            font-size: 1rem;
+            font-family: cursive;
+            color: white;
+            border:2px solid aliceblue;
+            border-radius: 20px;
+            cursor: pointer;
+            
+        }
+        .text:hover{
+            background-color: aliceblue;
+            color: black;
+
+        }
+        .box{
+          
+            height: 700px;
+            background-color: rgba(67, 66, 66, 0.797);
+        }
+        .c{
+            border:2px solid rgb(0, 9, 17); 
+        
+           
+            width: auto;
+            height: auto;
+            border-radius: 20px;
+            padding: 7px;
+            top: 245px;
+            position: absolute;
+            display: none;
+            font-size: 20px;
+            background-color: rgb(167, 225, 235)
+        
+        }
+
+    </style>
+</head>
+<body>
+   
+    <h1>About Us</h1>
+    <div class="box">
+        <ul>
+            
+            <div >
+                <li><img src="pooja.jpg" alt="pooja" width="100px"><br><span id="text1" class="text">see more +</span></li>
+                <p class="c c1">13 October 1990 (age 33) <br>
+                    Bombay, Maharashtra, India <br>
+                    (present-day Mumbai) <br>
+                    Alma mater	M. M. K. College <br>
+                    Occupation	Actress <br>
+                    Years active	2012–present</p>
+            </div>
+            <div>
+                <li><img src="alia.jpg" alt="" width="100px"><br><span id="text2" class="text">see more +</span></li>
+                <p class="c c2">Born	15 March 1993 (age 30) <br>
+                    India <br>
+                    Citizenship	British <br>
+                    Occupation	Actress <br>
+                    Years active	2012–present <br>
+                    Spouse	Ranbir Kapoor ​(m. 2022)​ <br>
+                    Children	1 <br>
+                    Parents	
+                    Mahesh Bhatt (father) <br>
+                    Soni Razdan (mother) <br>
+                    Relatives	Bhatt family <br>
+                    Kapoor family (by marriage) <br>
+                    </p>
+
+
+            </div>
+            
+            <!-- <div>
+                <li><img src="ana.jpg" alt="" width="100px" height="152px"><br><span id="text3" class="text">see more +</span></li>
+                <p class="c c3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, rem.</p>
+    
+
+            </div> -->
+           
+            <div>
+                
+                    <li><img src="allu.jpg" alt="" width="100px" height="152px"><br><span id="text4" class="text">see more +</span></li>
+
+               
+                
+                    <p class="c c4">Born	8 April 1982 (age 41)[a] <br>
+                        Madras (now Chennai), Tamil Nadu, India <br>
+                        Other names	Bunny,[1] Mallu Arjun,[2] <br>
+                        Occupations	<br>
+                        Actordancer <br>
+                        Years active	2001–present <br>
+                        Works	Full list <br>
+                        Spouse	Sneha Reddy ​(m. 2011)​ <br>
+                        Children	2 <br>
+                        Parent	<br>
+                        Allu Aravind (father) <br>
+                        Relatives	Allu Sirish (brother) <br>
+                        Family	Allu–Konidela</p>
+
+                
+                
+           
+
+            </div>
+            
+        </ul>
+
+    </div>
+   
+   
+    
+</body>
+<script>
+    $(document).ready(function(){
+        $("#text1").click(function(){
+            $(".c1").slideToggle(1500);
+        })
+        $("#text2").click(function(){
+            $(".c2").slideToggle(1500);
+        })
+        // $("#text3").click(function(){
+        //     $(".c3").slideToggle(1500);
+        // })
+        $("#text4").click(function(){
+            $(".c4").slideToggle(1500);
+        })
+    })
+
+</script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+  body{
+    border: 2px solid black;
+  }
+table {
+  font-family: "lucida handwriting";
+  border-collapse: collapse;
+  width: 70%;
+  margin-left: 10%;
+}
+
+td, th {
+  border: 2px solid #080404;
+  text-align: left;
+  padding: 10px;
+  font-size: 18px;
+}
+
+tr:nth-child(even) {
+  background-color: #d3d1bf;
+}
+#myInput{
+  margin-left: 10%;
+  width: 350px;
+  height: 35px;
+
+}
+</style>
+</head>
+<body>
+  <p><br><br></p>
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+<br>
+<br>
+<p></p>
+<table>
+  <thead>
+  <tr>
+    <th style="font-family: ARIAL;">Job Catagory</th>
+    <th style="font-family: ARIAL;">JOB</th>
+    <th style="font-family: ARIAL;">Location</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>Software Engineer</td>
+    <td>Android Developer</td>
+    <td>Bangalore</td>
+  </tr>
+  <tr>
+    <td>Software Developer</td>
+    <td>Web Developer</td>
+    <td>Hyderabad</td>
+  </tr>
+  <tr>
+    <td>Software Architect</td>
+    <td>IOS Developer</td>
+    <td>Bhubhaneswar</td>
+  </tr>
+  <tr>
+    <td>WEB ANALYTICS DEVELOPER</td>
+    <td>XL Deploy Engineer</td>
+    <td>Mumbai</td>
+  </tr>
+  <tr>
+    <td>Marketing & Sales</td>
+    <td>Manager</td>
+    <td>Delhi</td>
+  </tr>
+ <tr>
+     <td>Program audit</td>
+    <td>Portfolio Asst.</td>
+    <td>Mumbai</td>
+  </tr>
+  <tr>
+    <td>Administrative Asst.</td>
+   <td>Clerk</td>
+   <td>Pune</td>
+ </tr>
+  </tbody>
+</table>
+<p></p><br><br><br><br>
+
+</body>
+</html>
